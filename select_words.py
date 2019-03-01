@@ -1,9 +1,11 @@
 import csv
-n = 1
+import random
+
 p = []
-test = 'test1 test2 test3'
+random_line = random.randint(1, 99)
 with open("100IRverbs.csv") as file:
     lines = file.readlines()
-lines = ' '.join(lines[n:n+1])
-p = lines.split(' ')
+lines = ' '.join(lines[random_line:random_line+1])
+p = lines.split(';')
+p = [line.rstrip() for line in p]
 print(p)
